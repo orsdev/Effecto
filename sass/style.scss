@@ -1,0 +1,23 @@
+@import 'components/container';
+@import 'components/header';
+@import 'layout/responsive';
+@import 'components/interface';
+
+@import 'utilities/animation';
+@import 'utilities/utilities';
+@import 'utilities/variables';
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 90%;
+}
+
+body {
+	margin: 1px;
+	padding: 0;
+	background-image: linear-gradient(-42deg, $lightOrange , darken($lightOrange , 20%) ,purple);
+	box-sizing: inherit;
+}

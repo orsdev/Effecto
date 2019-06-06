@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="utf-8">
+	<title>EFFECTO</title>
+	<meta name="viewport" width="device-width; initial-scale=1.0">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+	<div class="app-container">
+		<!--HEADER SECTION -->
+		<section id="header">
+			<header class="header">
+				<nav class="nav">
+					<div class="brand-container">
+						<h2 class="nav-brand">EFO</h2>
+					</div>
+					<div class="menu">
+						<ul class="one">
+							<li>File
+								<span class="file-upload">
+									<label for="upload">New</label>
+									<input type="file" id="upload"></span>
+							</li>
+							<li>Edit</li>
+							<li>Image</li>
+							<li>Layer</li>
+						</ul>
+						<ul class="two">
+							<li>Type</li>
+							<li>Filter</li>
+							<li>3D</li>
+							<li>View</li>
+						</ul>
+					</div>
+					<div class="main-menu">
+						<ul>
+							<li class="collapse">
+								<i class="fa fa-window-minimize"></i>
+							</li>
+							<li class="max-min">
+								<i class="fa fa-window-restore"></i>
+							</li>
+							<li class="close">
+								<i class="fa fa-window-close"></i>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+		</section>
+		<!-- USER INTERFACE -->
+		<section id="interface">
+			<div class="container">
+				<div class="tools">
+					<ul>
+						<li><i class="fa fa-arrows"></i></li>
+						<li><i class="fa fa-crop"></i></li>
+						<li><i class="fa fa-eyedropper"></i></li>
+						<li><i class="fa fa-paint-brush"></i></li>
+						<li><i class="fa fa-hand-paper-o"></i></li>
+						<li><i class="fa fa-search"></i></li>
+						<li><i class="fa fa-eraser"></i></li>
+						<li><i class="fa fa-mouse-pointer"></i></li>
+					</ul>
+				</div>
+				<div class="user-interface">
+				<div class="app-name">
+					<h3 class="animated infinite bounceIn delay-3s slower">EFFECTO</h3>
+				</div>
+				</div>
+				<div class="effect">
+					<div class="sliders">
+						<form action="">
+							<div class="form-group">
+								<label for="brightness">Brightness</label>
+								<input type="range" id="brightness" value="100" min="0" max="200" data-name="%">
+							</div>
+							<div class="form-group">
+								<label for="contrast">Contrast</label>
+								<input type="range" id="contrast" value="100" min="0" max="200" data-name="%">
+							</div>
+							<div class="form-group">
+								<label for="blur">Blur</label>
+								<input type="range" id="blur" value="100" min="0" max="200" data-name="%">
+							</div>
+							<div class="form-group">
+								<label for="saturate">Saturate</label>
+								<input type="range" id="saturate" value="100" min="0" max="200" data-name="%">
+							</div>
+							<div class="form-group">
+								<label for="sepia">Sepia</label>
+								<input type="range" id="sepia" value="100" min="0" max="200" data-name="%">
+							</div>
+							<div class="form-group">
+								<label for="grayscale">Grayscale</label>
+								<input type="range" id="grayscale" value="100" min="0" max="200" data-name="%">
+							</div>
+							<div class="form-group">
+								<label for="invert">Invert</label>
+								<input type="range" id="invert" value="100" min="0" max="200" data-name="%">
+							</div>
+
+							<div class="form-group">
+								<label for="opacity">Opacity</label>
+								<input type="range" id="opacity" value="100" min="0" max="200" data-name="%">
+							</div>
+						</form>
+					</div>
+					<hr />
+					<div class="blend-modes">
+						<div class="blend-modes__container">
+							<h3>Blend Mode</h3>
+							<select name="blend-mode" id="select">
+								<option value="normal">normal</option>
+								<option value="multiply">multiply</option>
+								<option value="screen">screen</option>
+								<option value="overlay">overlay</option>
+								<option value="darken">darken</option>
+								<option value="lighten">lighten</option>
+								<option value="color-dogde">color-dogde</option>
+								<option value="color-burn">color-burn</option>
+								<option value="hard-light">hard-light</option>
+								<option value="soft-light">soft-light</option>
+								<option value="difference">difference</option>
+								<option value="exclusion">exclusion</option>
+								<option value="hue">hue</option>
+								<option value="saturation">saturation</option>
+								<option value="color">color</option>
+								<option value="luminosity">luminosity</option>
+							</select>
+						</div>
+						<div class="buttons">
+							<button>RESET</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+
+	</div>
+</body></html>
