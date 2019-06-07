@@ -1,8 +1,13 @@
-#header label {
-	display: block;
-	color: white;
-	margin-top: 5px;
+#header {
+	.file-upload {
 	visibility: hidden;
+	}
+
+	label {
+		display: block;
+		color: white;
+		margin-top: 5px;
+	}
 }
 
 .file-upload input {

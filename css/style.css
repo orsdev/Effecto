@@ -47,8 +47,6 @@
     #header ul li {
       margin-right: 1rem;
       font-size: 1.2rem; }
-      #header ul li:active {
-        font-size: 1.01rem; }
   #header .main-menu {
     justify-self: end; }
     #header .main-menu ul {
@@ -264,11 +262,12 @@
     -webkit-transition: none !important;
     animation: unset !important;
     transition: none !important; } }
+#header .file-upload {
+  visibility: hidden; }
 #header label {
   display: block;
   color: white;
-  margin-top: 5px;
-  visibility: hidden; }
+  margin-top: 5px; }
 
 .file-upload input {
   width: 10px;
