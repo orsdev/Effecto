@@ -1,6 +1,6 @@
 #header {
 	.file-upload {
-	visibility: hidden;
+		visibility: hidden;
 	}
 
 	label {
@@ -8,11 +8,11 @@
 		color: white;
 		margin-top: 5px;
 	}
-}
 
-.file-upload input {
-	width: 10px;
-	visibility: hidden;
+	input {
+		width: 10px;
+		visibility: hidden;
+	}
 }
 
 ul {

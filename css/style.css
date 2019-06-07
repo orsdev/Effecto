@@ -268,8 +268,7 @@
   display: block;
   color: white;
   margin-top: 5px; }
-
-.file-upload input {
+#header input {
   width: 10px;
   visibility: hidden; }
 
