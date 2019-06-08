@@ -1,7 +1,6 @@
-//call function
-eventListener();
 
-function eventListener() {
+
+const eventListener = () => {
 	const header = document.querySelector('#header');
 	const file = document.querySelector('input[type=file]');
 
@@ -10,7 +9,7 @@ function eventListener() {
 	file.addEventListener('change', loadImage);
 }
 
-function toggleFile(event) {
+const toggleFile = (event) => {
 	let target = event.target;
 
 	if (target.classList.contains('file')) {
@@ -21,7 +20,7 @@ function toggleFile(event) {
 	}
 }
 
-function loadImage() {
+const loadImage = () => {
 
 	//get elements from dom
 	const interface = document.querySelector('.user-interface')
@@ -32,7 +31,7 @@ function loadImage() {
 	var reader = new FileReader();
 
 	//add eventlistener
-	reader.addEventListener('load', function () {
+	reader.addEventListener('load', () => {
 		img.src = reader.result;
 	}, false);
 
@@ -44,3 +43,6 @@ function loadImage() {
 	appName.style.display = "none";
 
 }
+
+//call function
+eventListener();
