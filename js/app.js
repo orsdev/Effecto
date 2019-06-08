@@ -7,6 +7,7 @@ const eventListener = () => {
 	header.addEventListener('click', toggleFile);
 	file.addEventListener('change', loadImage);
 	effect.addEventListener('change', sliderEffect);
+	effect.addEventListener('change', blendModes);
 }
 
 const toggleFile = (event) => {
@@ -61,6 +62,15 @@ const sliderEffect = (event) => {
 			});
 		})
 
+	}
+}
+
+const blendModes = (event) => {
+	let target = event.target;
+	let img = document.querySelector('.img');
+
+	if (target.tagName === 'SELECT') {
+		document.documentElement.style.setProperty(`--${'blend'}`, `${target.value}`)
 	}
 }
 

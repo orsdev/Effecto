@@ -14,7 +14,7 @@
 .img {
 	max-width: 100%;
 	filter: blur(var(--blur)) contrast(var(--contrast)) brightness(var(--brightness)) saturate(var(--saturate)) sepia(var(--sepia)) grayscale(var(--grayscale)) invert(var(--invert)) opacity(var(--opacity));
-	mix-blend-mode: --blend;
+	mix-blend-mode: var(--blend);
 }
 
 .app-container {
