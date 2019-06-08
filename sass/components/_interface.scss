@@ -1,5 +1,10 @@
 :root {
-	--filter: none;
+	--blur: 0px;
+	--contrast: 100%;
+	--brightness: 100%;
+	--saturate: 100%;
+	--sepia: 0%;
+	--opacityss: 100%;
 	--blend: normal;
 }
 
@@ -100,4 +105,12 @@
 		color: white;
 		mix-blend-mode: overlay;
 	}
+}
+
+.img {
+	max-width: 100%;
+	filter: blur( var(--blur) ) contrast( var(--contrast) )
+					brightness( var(--brightness) ) saturate( var(--saturate) )
+					sepia( var(--sepia) );
+				
 }

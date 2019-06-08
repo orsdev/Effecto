@@ -1,5 +1,3 @@
-
-
 const eventListener = () => {
 	const header = document.querySelector('#header');
 	const file = document.querySelector('input[type=file]');
@@ -7,6 +5,7 @@ const eventListener = () => {
 	//event listeners
 	header.addEventListener('click', toggleFile);
 	file.addEventListener('change', loadImage);
+	
 }
 
 const toggleFile = (event) => {
@@ -14,7 +13,7 @@ const toggleFile = (event) => {
 
 	if (target.classList.contains('file')) {
 		let firstElemChild = target.firstElementChild;
-		
+
 		//show and hide targeted element
 		firstElemChild.classList.toggle('file-upload');
 	}
@@ -38,7 +37,7 @@ const loadImage = () => {
 	if (inputFile) {
 		reader.readAsDataURL(inputFile);
 	}
-	
+
 	//hide selected element
 	appName.style.display = "none";
 
