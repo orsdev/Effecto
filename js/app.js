@@ -8,6 +8,7 @@ const eventListener = () => {
 	file.addEventListener('change', loadImage);
 	effect.addEventListener('change', sliderEffect);
 	effect.addEventListener('change', blendModes);
+
 }
 
 const toggleFile = (event) => {
@@ -25,7 +26,7 @@ const loadImage = () => {
 
 	//get elements from dom
 	const interface = document.querySelector('.user-interface')
-	let img = document.querySelector('.img');
+	let img = document.querySelector('img');
 	let inputFile = document.querySelector('input[type=file]').files[0];
 	let appName = document.querySelector('.app-name');
 
@@ -47,7 +48,7 @@ const loadImage = () => {
 
 const sliderEffect = (event) => {
 	let target = event.target;
-	let img = document.querySelector('.img');
+	let img = document.querySelector('img');
 	
 	if (target.tagName === 'INPUT') {
 		const inputRange = document.querySelectorAll('input[type=range]');
@@ -67,12 +68,13 @@ const sliderEffect = (event) => {
 
 const blendModes = (event) => {
 	let target = event.target;
-	let img = document.querySelector('.img');
+	let img = document.querySelector('img');
 
 	if (target.tagName === 'SELECT') {
 		document.documentElement.style.setProperty(`--${'blend'}`, `${target.value}`)
 	}
 }
+
 
 //call function
 eventListener();
