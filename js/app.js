@@ -83,13 +83,17 @@ const blendModes = (event) => {
 const reset = (event) => {
 	let target = event.target;
 
-	const form = document.querySelector('form');
+	const forms = document.querySelectorAll('form');
 	const inputRange = document.querySelectorAll('input[type=range]');
 	let img = document.querySelector('img');
-	
-	
+
+
 	//reset sliders and blend mode
-	form.reset();
+	forms.forEach((form) => {
+		form.reset();
+	})
+
+	document.documentElement.style.setProperty(`--${'blend'}`, `${forms[1].value}`);
 	
 	//add class to image element
 	img.classList.add('img');
