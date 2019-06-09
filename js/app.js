@@ -1,4 +1,6 @@
 const eventListener = () => {
+	
+	//get element from dom
 	const header = document.querySelector('#header');
 	const file = document.querySelector('input[type=file]');
 	const effect = document.querySelector('.effect');
@@ -83,6 +85,7 @@ const blendModes = (event) => {
 const reset = (event) => {
 	let target = event.target;
 
+	//get elements from dom
 	const forms = document.querySelectorAll('form');
 	const inputRange = document.querySelectorAll('input[type=range]');
 	let img = document.querySelector('img');
