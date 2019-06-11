@@ -29,7 +29,7 @@ const disableSelectAndSlider = (value) => {
 	inputRange.forEach((input) => {
 		input.disabled = value;
 	})
-	
+
 }
 
 const toggleFile = (event) => {
@@ -47,27 +47,42 @@ const loadImage = () => {
 
 	//get elements from dom
 	const interface = document.querySelector('.user-interface')
-	let img = document.querySelector('img');
 	let inputFile = document.querySelector('input[type=file]').files[0];
 	let appName = document.querySelector('.app-name');
-
-	//assign value to img alt attribute
-	img.alt = img.localName;
+	const spinner = document.querySelector('.lds-spinner');
 
 	var reader = new FileReader();
 
+	//hide selected element
+	appName.style.display = "none";
+
+	//show spinner
+	spinner.style.display = 'block';
+
 	//add eventlistener
 	reader.addEventListener('load', () => {
-		img.src = reader.result;
+
+		//delay image before loading
+		setTimeout(function () {
+			let img = document.querySelector('img');
+
+			//hide spinner
+			spinner.style.display = 'none';
+
+			//assign value to img alt attribute
+			img.alt = img.localName;
+
+			img.src = reader.result;
+
+
+		}, 2000);
+
 	}, false);
 
 	if (inputFile) {
 		reader.readAsDataURL(inputFile);
 	}
 
-	//hide selected element
-	appName.style.display = "none";
-	
 	//enable slider and select elements when image is loaded
 	disableSelectAndSlider(false);
 
