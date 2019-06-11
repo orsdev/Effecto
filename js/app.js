@@ -67,6 +67,9 @@ const loadImage = () => {
 
 	//hide selected element
 	appName.style.display = "none";
+	
+	//enable slider and select elements when image is loaded
+	disableSelectAndSlider(false);
 
 }
 
