@@ -2,3 +2,5 @@
 .map
 /fonts
 /img
+.debug.log
+/debug.log
