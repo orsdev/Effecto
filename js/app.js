@@ -1,5 +1,5 @@
 const eventListener = () => {
-	
+
 	//get element from dom
 	const header = document.querySelector('#header');
 	const file = document.querySelector('input[type=file]');
@@ -32,6 +32,9 @@ const loadImage = () => {
 	let img = document.querySelector('img');
 	let inputFile = document.querySelector('input[type=file]').files[0];
 	let appName = document.querySelector('.app-name');
+
+	//assign value to img alt attribute
+	img.alt = img.localName;
 
 	var reader = new FileReader();
 
@@ -77,8 +80,8 @@ const blendModes = (event) => {
 	let target = event.target;
 	let img = document.querySelector('img');
 
-	if (target.tagName === 'SELECT') {
-		document.documentElement.style.setProperty(`--${'blend'}`, `${target.value}`)
+	if (target.tagName === 'SELECT' && img.alt !== '') {
+		document.documentElement.style.setProperty(`--${'blend'}`, `${target.value}`);	
 	}
 }
 
@@ -97,16 +100,16 @@ const reset = (event) => {
 	})
 
 	document.documentElement.style.setProperty(`--${'blend'}`, `${forms[1].value}`);
-	
+
 	//add class to image element
 	img.classList.add('img');
-	
+
 	//loop through input[type=range] and set css variables to default value
 	inputRange.forEach((input) => {
 		let dataset = input.dataset;
 
 		document.documentElement.style.setProperty(`--${input.id}`, `${dataset.default+dataset.name}`);
-	
+
 	})
 
 }
