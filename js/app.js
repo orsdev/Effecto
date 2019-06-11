@@ -12,6 +12,24 @@ const eventListener = () => {
 	effect.addEventListener('change', sliderEffect);
 	effect.addEventListener('change', blendModes);
 	resetButton.addEventListener('click', reset);
+
+	document.addEventListener('DOMContentLoaded', disableSelectAndSlider(true));
+}
+
+const disableSelectAndSlider = (value) => {
+
+	//get elements from dom
+	const select = document.querySelector('select');
+	const inputRange = document.querySelectorAll('input[type=range]');
+
+	//disable select option
+	select.disabled = value;
+
+	//loop throup all input[type=range] and disable
+	inputRange.forEach((input) => {
+		input.disabled = value;
+	})
+	
 }
 
 const toggleFile = (event) => {
@@ -81,7 +99,7 @@ const blendModes = (event) => {
 	let img = document.querySelector('img');
 
 	if (target.tagName === 'SELECT' && img.alt !== '') {
-		document.documentElement.style.setProperty(`--${'blend'}`, `${target.value}`);	
+		document.documentElement.style.setProperty(`--${'blend'}`, `${target.value}`);
 	}
 }
 
