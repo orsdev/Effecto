@@ -7,7 +7,7 @@ const eventListener = () => {
 	const resetButton = document.querySelector('#reset');
 
 	//event listeners
-	header.addEventListener('click', toggleFile);
+	header.addEventListener('click', toggleFile.bind(null , 'file-upload'));
 	file.addEventListener('change', loadImage);
 	effect.addEventListener('change', sliderEffect);
 	effect.addEventListener('change', blendModes);
@@ -33,9 +33,6 @@ const disableSelectAndSlider = (value) => {
 }
 
 const toggleFile = (className) => {
-
-	//assign value to className if argument is not passed
-	className = 'file-upload' || className;
 
 	//get parent element of input and label
 	const file = document.querySelector('.file');
