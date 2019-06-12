@@ -32,14 +32,19 @@ const disableSelectAndSlider = (value) => {
 
 }
 
-const toggleFile = (event) => {
-	let target = event.target;
+const toggleFile = (className) => {
 
-	if (target.classList.contains('file')) {
-		let firstElemChild = target.firstElementChild;
+	//assign value to className if argument is not passed
+	className = 'file-upload' || className;
+
+	//get parent element of input and label
+	const file = document.querySelector('.file');
+
+	if (file) {
+		let firstElemChild = file.firstElementChild;
 
 		//show and hide targeted element
-		firstElemChild.classList.toggle('file-upload');
+		firstElemChild.classList.toggle(className);
 	}
 }
 
