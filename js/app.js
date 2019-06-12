@@ -87,6 +87,9 @@ const loadImage = () => {
 
 	//enable slider and select elements when image is loaded
 	disableSelectAndSlider(false);
+	
+	//hide element is visible
+	toggleFile('file-upload');
 
 }
 
