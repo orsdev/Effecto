@@ -2,13 +2,13 @@ const eventListener = () => {
 
 	//get element from dom
 	const header = document.querySelector('#header');
-	const file = document.querySelector('input[type=file]');
+	const file = document.querySelector('.file');
 	const effect = document.querySelector('.effect');
 	const resetButton = document.querySelector('#reset');
 
 	//event listeners
-	header.addEventListener('click', toggleFile.bind(null , 'file-upload'));
-	file.addEventListener('change', loadImage);
+	file.addEventListener('click', toggleFile.bind(null, 'file-upload'));
+	file.addEventListener('change', loadImage.bind(null, 'file-upload'));
 	effect.addEventListener('change', sliderEffect);
 	effect.addEventListener('change', blendModes);
 	resetButton.addEventListener('click', reset);
@@ -33,19 +33,15 @@ const disableSelectAndSlider = (value) => {
 }
 
 const toggleFile = (className) => {
+	let file = document.querySelector('.file');
 
-	//get parent element of input and label
-	const file = document.querySelector('.file');
+	//get first child element
+	let firstElemChild = file.firstElementChild;
 
-	if (file) {
-		let firstElemChild = file.firstElementChild;
-
-		//show and hide targeted element
-		firstElemChild.classList.toggle(className);
-	}
+	//show and hide targeted element
+	firstElemChild.classList.toggle(className);
 }
-
-const loadImage = () => {
+const loadImage = (className) => {
 
 	//get elements from dom
 	const interface = document.querySelector('.user-interface')
@@ -67,7 +63,7 @@ const loadImage = () => {
 		//delay image before loading
 		setTimeout(function () {
 			let img = document.querySelector('img');
-			
+
 			//show image
 			img.style.display = 'block';
 
@@ -79,7 +75,6 @@ const loadImage = () => {
 
 			img.src = reader.result;
 
-
 		}, 2000);
 
 	}, false);
@@ -90,9 +85,9 @@ const loadImage = () => {
 
 	//enable slider and select elements when image is loaded
 	disableSelectAndSlider(false);
-	
-	//hide element is visible
-	toggleFile('file-upload');
+
+	//hide element (label)
+	toggleFile(className)
 
 }
 
