@@ -67,6 +67,9 @@ const loadImage = () => {
 		//delay image before loading
 		setTimeout(function () {
 			let img = document.querySelector('img');
+			
+			//show image
+			img.style.display = 'block';
 
 			//hide spinner
 			spinner.style.display = 'none';
