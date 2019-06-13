@@ -30,6 +30,10 @@ img {
 	margin-bottom: 50px;
 }
 
+.maximize {
+	width: 100%;
+}
+
 #header {
 	width: 100%;
 	margin: 0 auto;
@@ -102,8 +106,8 @@ img {
 	color: #ffd49c;
 }
 
-#header .menu li:hover:not(:first-child){
-	color:  #ffd49c;
+#header .menu li:hover:not(:first-child) {
+	color: #ffd49c;
 	margin-top: -2px;
 }
 

@@ -5,6 +5,7 @@ const eventListener = () => {
 	const file = document.querySelector('.file');
 	const effect = document.querySelector('.effect');
 	const resetButton = document.querySelector('#reset');
+	const maximize = document.querySelector('.fa-window-restore');
 
 	//event listeners
 	file.addEventListener('click', toggleFile.bind(null, 'file-upload'));
@@ -12,6 +13,7 @@ const eventListener = () => {
 	effect.addEventListener('change', sliderEffect);
 	effect.addEventListener('change', blendModes);
 	resetButton.addEventListener('click', reset);
+	maximize.addEventListener('click', toggleMaximize);
 
 	document.addEventListener('DOMContentLoaded', disableSelectAndSlider(true));
 }
@@ -152,5 +154,12 @@ const reset = (event) => {
 	})
 
 }
+
+toggleMaximize = () => {
+	const appContainer = document.querySelector('.app-container');
+
+	appContainer.classList.toggle('maximize');
+}
+
 //call function
 eventListener();
