@@ -48,14 +48,12 @@ img {
 #header .nav {
 	height: 80%;
 	display: grid;
-	grid-template-columns: .3fr 2fr 1fr;
+	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-rows: auto;
-	justify-content: center;
-	margin-top: 10px;
 }
 
 #header .nav-brand {
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 	color: white;
 }
 
@@ -70,12 +68,7 @@ img {
 }
 
 #header .menu .one {
-	justify-content: flex-end;
-}
-
-#header .menu li:hover:not(:first-child) {
-	color: #ffd49c;
-	margin-top: -1px;
+	justify-content: center;
 }
 
 #header ul {
@@ -87,22 +80,20 @@ img {
 
 #header ul li {
 	margin-right: 1rem;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 }
 
 #header .main-menu {
 	justify-self: end;
 }
 
-#header .main-menu ul {
-	text-align: center;
-}
+#header .main-menu ul {}
 
 #header .main-menu ul li {
-	display: inline;
-	width: 26px;
+	width: 34px;
 	outline: 2px inset gray;
-	padding: .1rem 0;
+	padding: .3rem .4rem;
+	font-size: 1.4rem;
 }
 
 #header .main-menu ul li:hover {
@@ -120,12 +111,6 @@ img {
 
 	.menu .one {
 		height: 47px;
-		justify-content: center !important;
-	}
-
-	.menu .two {
-		justify-content: center;
-		margin-top: -10px !important;
 	}
 }
 
@@ -213,7 +198,6 @@ img {
 	border: 1px solid #eee;
 	border-radius: 3px;
 }
-
 
 .lds-spinner {
 	color: official;
@@ -310,7 +294,6 @@ img {
 		opacity: 0;
 	}
 }
-
 
 .app-name {
 	width: 100%;
