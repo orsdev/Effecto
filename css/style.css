@@ -91,8 +91,6 @@ img {
 	justify-self: end;
 }
 
-#header .main-menu ul {}
-
 #header .main-menu ul li {
 	width: 34px;
 	outline: 2px inset gray;
@@ -102,6 +100,11 @@ img {
 
 #header .main-menu ul li:hover {
 	color: #ffd49c;
+}
+
+#header .menu li:hover:not(:first-child){
+	color:  #ffd49c;
+	margin-top: -2px;
 }
 
 @media (max-width: 900px) {
