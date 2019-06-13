@@ -12,8 +12,12 @@
 
 img {
 	max-width: 100%;
+	display: none;
 	filter: blur(var(--blur)) contrast(var(--contrast)) brightness(var(--brightness)) saturate(var(--saturate)) sepia(var(--sepia)) grayscale(var(--grayscale)) invert(var(--invert)) opacity(var(--opacity));
 	mix-blend-mode: var(--blend);
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .img {
@@ -154,6 +158,8 @@ img {
 	display: flex;
 	align-items: center;
 	mix-blend-mode: var(--blend);
+	height: 640px;
+	padding: 10px 5px 0 5px;
 }
 
 .effect {
