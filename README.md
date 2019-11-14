@@ -4,7 +4,7 @@
   ````
   
 ## About
-A mini photoshop web-app created with vanilla Js , Css and Html
+A mini web app photo editor.
 
 
 ## Built With
